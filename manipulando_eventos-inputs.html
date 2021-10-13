@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Javascript</title>
+		
+		
+	</head>
+	<body>
+	
+		<input id="entrada" onfocus="foco('#FFFF00')" onblur="foco2()" type="text" placeholder="Digite um caractere">
+
+		<script>
+
+			function foco(corDeFundo){
+				//muda a cor da caixa de input ao ser clicada
+				document.getElementById('entrada').style.background = corDeFundo
+			}
+
+			function foco2(){
+				//recupera o conteúdo inserido na caixa de input
+				var conteudo = document.getElementById('entrada').value
+
+				if(conteudo.length <=3){
+					//caso o conteudo tenha 3 caracteres ou menos, sua cor será alterada para vermelho
+					document.getElementById('entrada').style.background = '#FF0000'
+				}
+				else{
+					//caso o conteudo tenha mais de 3 caracteres, sua cor será alterada para verde
+					document.getElementById('entrada').style.background = '#008000'
+				}
+			}
+
+			
+		</script>
+	</body>
+</html>
